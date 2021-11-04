@@ -13885,3 +13885,7 @@ body:not(.ct-editing) .hvr-ic-scroll-up:hover .hvr-icon,
   -moz-animation: toTopFromBottom 0.3s forwards;
   animation: toTopFromBottom 0.3s forwards;
 }
+
+[data-block-type=element] {
+  display: inline-block;
+}
