@@ -7532,7 +7532,8 @@ body:not(.ct-editing) .btn-reveal-txt-size:hover > span,
   padding-top: var(--bs-aspect-ratio);
   content: "";
 }
-.ratio > * {
+.ratio > img,
+.ratio > iframe {
   position: absolute;
   top: 0;
   left: 0;
@@ -7554,6 +7555,22 @@ body:not(.ct-editing) .btn-reveal-txt-size:hover > span,
 
 .ratio-21x9 {
   --bs-aspect-ratio: calc(9 / 21 * 100%);
+}
+
+figure.object-fit-cover > img, figure.object-fit-cover > iframe {
+  object-fit: cover;
+}
+
+figure.object-fit-contain > img, figure.object-fit-contain > iframe {
+  object-fit: contain;
+}
+
+.object-fit-containimg, .object-fit-containiframe {
+  object-fit: cover;
+}
+
+.object-fit-containimg, .object-fit-containiframe {
+  object-fit: contain;
 }
 
 .fixed-top {
@@ -7643,79 +7660,6 @@ body:not(.ct-editing) .btn-reveal-txt-size:hover > span,
 }
 
 /* end helpers */
-.shape-divider {
-  position: absolute !important;
-  width: 100%;
-  z-index: 0;
-  bottom: 0;
-  left: 0;
-  display: block;
-}
-.shape-divider > svg {
-  width: 101%;
-  height: 100%;
-  left: 50%;
-  position: absolute;
-  transform: translatex(-50%);
-  bottom: -2px;
-}
-.shape-divider[data-position=bottom] {
-  bottom: -2px;
-  top: auto;
-}
-.shape-divider[data-position=top] {
-  bottom: auto;
-  top: -2px;
-}
-.shape-divider[data-flip-horizontal=true] {
-  transform: rotateY(180deg);
-}
-.shape-divider[data-flip-vertical=true] {
-  transform: rotateX(180deg);
-}
-.shape-divider[data-flip-horizontal=true][data-flip-vertical=true] {
-  transform: rotateY(180deg) rotateX(180deg);
-}
-.shape-divider.theme > svg > path {
-  fill: #110305 !important;
-}
-.shape-divider.accent > svg > path {
-  fill: #991b1e !important;
-}
-.shape-divider.primary > svg > path {
-  fill: #110305 !important;
-}
-.shape-divider.secondary > svg > path {
-  fill: #991b1e !important;
-}
-.shape-divider.tertiary > svg > path {
-  fill: #FAFFFF !important;
-}
-.shape-divider.success > svg > path {
-  fill: #20c997 !important;
-}
-.shape-divider.info > svg > path {
-  fill: #0d6efd !important;
-}
-.shape-divider.warning > svg > path {
-  fill: #fd7e14 !important;
-}
-.shape-divider.danger > svg > path {
-  fill: #dc3545 !important;
-}
-.shape-divider.light > svg > path {
-  fill: #f8f9fa !important;
-}
-.shape-divider.dark > svg > path {
-  fill: #212529 !important;
-}
-.shape-divider.white > svg > path {
-  fill: #fff !important;
-}
-.shape-divider.black > svg > path {
-  fill: #000 !important;
-}
-
 /* 	Separator */
 .feature-box {
   overflow: hidden;
